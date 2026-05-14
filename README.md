@@ -7,14 +7,15 @@ Demonstration video
 <table>
   <tr>
     <td width="50%">
-      <!-- 第一个视频 -->
-      <video src="https://github.com/user-attachments/assets/aa3ac187-5e17-43dc-a760-f9e899099743" controls="controls" width="100%"></video>
+      <b>low-density-Untrained</b>
+      <video src="https://github.com/user-attachments/assets/a4ea1005-1787-4a49-8c52-9a720f5b6b12" controls="controls" width="100%"></video>
     </td>
     <td width="50%">
-      <!-- 第二个视频 -->
-      <video src="https://github.com/user-attachments/assets/9588f62b-0163-4ad1-ac87-a75d94476dd9" controls="controls" width="100%"></video>
+      <b>low-density-trained</b>
+      <video src="https://github.com/user-attachments/assets/690f50b3-c2db-417d-8e3c-032050d3fb7a" controls="controls" width="100%"></video>
     </td>
   </tr>
 </table>
+
 
 
