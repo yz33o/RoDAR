@@ -8,7 +8,19 @@ from flow.controllers.mobil_lane_changer import MOBILLaneChangeController
 from flow.controllers.RuleBasedLaneChanger_ import RuleBasedLaneChanger
 from flow.networks.merge import MergeNetwork, ADDITIONAL_NET_PARAMS
 from flow.envs.multiagent.merge import MultiAgentMergePOEnv, ADDITIONAL_ENV_PARAMS
+import traci
 
+_original_traci_start = traci.start
+
+def patched_traci_start(cmd, *args, **kwargs):
+    extra_args = [
+        '--tripinfo-output', 'data/tripinfo.xml',
+        '--summary-output', 'data/summary.xml',
+        '--collision-output', 'data/collisions.xml'
+    ]
+    cmd.extend(extra_args)
+    return _original_traci_start(cmd, *args, **kwargs)
+traci.start = patched_traci_start
 
 def set_random_seed(seed=1234, env=None):
     torch.manual_seed(seed)
