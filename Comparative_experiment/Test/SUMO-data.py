@@ -24,5 +24,5 @@ def check_network_edges(file_path):
     print(f"速度标准差:   {std_speed_ms:.2f} m/s  (约 {std_speed_kmh:.2f} km/h)")
 
 if __name__ == "__main__":
-    data_file = "data/merge_20260518-1353091779083589.299307-0_emission.csv"
+    data_file = "merge_20260518-1353091779083589.299307-0_emission.csv"
     check_network_edges(data_file)
